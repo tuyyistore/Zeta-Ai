@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Zeta Ai] - Solusi WhatsApp Otomatis untuk Bisnis Anda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Gaya Dasar */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #343a40;
+            scroll-behavior: smooth; /* Untuk scroll halus saat klik link */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        /* Header */
+        header {
+            background: #ffffff;
+            color: #343a40;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header #branding h1 {
+            margin: 0;
+            font-size: 1.8em;
+            color: #28a745; /* Warna hijau untuk branding */
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 25px;
+        }
+
+        header nav ul li a {
+            color: #343a40;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #28a745;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1600x600/28a745/ffffff?text=Latar+Belakang+WhatsApp+Bot') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Tombol */
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #28a745; /* Hijau WhatsApp */
+            color: white;
+            border: none;
+            border-radius: 50px; /* Bentuk pil */
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin: 10px;
+        }
+
+        .button:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        .button.secondary {
+            background: #6c757d; /* Abu-abu */
+        }
+
+        .button.secondary:hover {
+            background-color: #5a6268;
+        }
+
+        /* Fitur Section */
+        .features {
+            padding: 60px 0;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #343a40;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            background: #fdfdff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item h3 {
+            font-size: 1.5em;
+            color: #28a745;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Testimoni Section */
+        .testimonials {
+            padding: 60px 0;
+            background: #f0f2f5;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #343a40;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-item {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .testimonial-item p {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .testimonial-item cite {
+            display: block;
+            font-style: normal;
+            font-weight: 600;
+            color: #28a745;
+            margin-top: 10px;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta h2 {
+            font-size: 2.8em;
+            margin-bottom: 25px;
+        }
+
+        .cta p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #212529;
+            color: #adb5bd;
+            font-size: 0.9em;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1.1em;
+            }
+            header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            header nav ul li {
+                margin: 0 10px;
+            }
+            .feature-grid, .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>[Nama Bisnis Anda]</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#fitur">Fitur</a></li>
+                    <li><a href="#testimoni">Testimoni</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Selamat Datang di Zeta Ai</h1>
+            <p>Solusi otomatisasi WhatsApp terbaik untuk meningkatkan komunikasi dan efisiensi bisnis Anda, 24/7.</p>
+            <a href="#kontak" class="button">Mulai Sekarang</a>
+            <a href="#fitur" class="button secondary">Pelajari Fitur</a>
+        </div>
+    </section>
+
+    <section class="features" id="fitur">
+        <div class="container">
+            <h2>Fitur Utama Zeta Ai</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Bot WhatsApp Serbaguna</h3>
+                    <p>Mampu menangani berbagai pertanyaan dan permintaan pelanggan secara otomatis, mulai dari FAQ hingga proses yang kompleks.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Kemudahan Penggunaan</h3>
+                    <p>Dirancang dengan antarmuka yang intuitif dan mudah dipahami, memungkinkan Anda mengelola bot tanpa perlu keahlian teknis mendalam.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Integrasi Cepat & Mudah</h3>
+                    <p>Hubungkan bot Anda dengan cepat ke CRM, sistem manajemen pesanan, atau platform lain yang sudah Anda gunakan.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Layanan Pelanggan 24/7</h3>
+                    <p>Pastikan pelanggan Anda selalu mendapatkan respons instan, kapan saja, bahkan di luar jam kerja.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Personalisasi Pesan</h3>
+                    <p>Kirim pesan yang dipersonalisasi berdasarkan data pelanggan untuk pengalaman yang lebih relevan dan menarik.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Analisis & Laporan</h3>
+                    <p>Dapatkan wawasan berharga tentang interaksi pelanggan melalui laporan dan analisis kinerja bot yang mendalam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimoni">
+        <div class="container">
+            <h2>Apa Kata Pelanggan Kami</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-item">
+                    <p>"[Nama Bot WhatsApp Anda] benar-benar mengubah cara kami berinteraksi dengan pelanggan. Responsnya cepat dan efisien, sangat membantu operasional kami!"</p>
+                    <cite>- [Nama Pelanggan 1], [Jabatan/Perusahaan]</cite>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Integrasinya sangat mulus dan tim support-nya responsif. Bot ini telah meningkatkan kepuasan pelanggan secara signifikan."</p>
+                    <cite>- [Nama Pelanggan 2], [Jabatan/Perusahaan]</cite>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Kemudahan penggunaannya luar biasa! Kami bisa mengelola bot tanpa kesulitan dan fitur 24/7-nya adalah nilai plus besar."</p>
+                    <cite>- [Nama Pelanggan 3], [Jabatan/Perusahaan]</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="kontak">
+        <div class="container">
+            <h2>Siap Mengotomatiskan Komunikasi Anda?</h2>
+            <p>Mulai perjalanan Anda dengan [Nama Bot WhatsApp Anda] sekarang dan rasakan perbedaannya!</p>
+            <a href="https://wa.me/6283121214520?text=Halo%2C%20saya%20tertarik%20dengan%20bot%20WhatsApp%20Anda." class="button" target="_blank">
+                Coba Demo Gratis via WhatsApp
+            </a>
+            <a href="mailto:emailanda@contoh.com?subject=Pertanyaan%20tentang%20Bot%20WhatsApp" class="button secondary">
+                Hubungi Kami via Email
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Zeta Ai. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+</body>
+</html>
